@@ -82,11 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 2000)),
+                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 3000)),
                     );
                   },
                   child: const Text(
-                    'ListView 2000',
+                    'ListView 3000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -132,11 +132,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 2000)),
+                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 3000)),
                     );
                   },
                   child: const Text(
-                    'column 2000',
+                    'column 3000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
