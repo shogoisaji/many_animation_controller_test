@@ -1,16 +1,14 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class ColumnPage extends StatefulWidget {
-  final int count;
+  final int count; // 100 or 1000 or 10000
 
   const ColumnPage({super.key, required this.count});
   @override
-  _ColumnPageState createState() => _ColumnPageState();
+  ColumnPageState createState() => ColumnPageState();
 }
 
-class _ColumnPageState extends State<ColumnPage> with TickerProviderStateMixin {
+class ColumnPageState extends State<ColumnPage> with TickerProviderStateMixin {
   final List<AnimationController> _controllers = [];
   final List<Animation<double>> _animations = [];
 
@@ -47,16 +45,20 @@ class _ColumnPageState extends State<ColumnPage> with TickerProviderStateMixin {
       body: SingleChildScrollView(
         child: Column(
           children: List.generate(_animations.length, (index) {
-            return AnimatedBuilder(
-              animation: _animations[index],
-              builder: (context, child) {
-                return Transform.translate(
-                  offset: Offset(_animations[index].value, 0),
-                  child: ListTile(
-                    title: Text('${index + 1}'),
+            return Row(
+              children: [
+                Expanded(
+                  child: AnimatedBuilder(
+                    animation: _animations[index],
+                    builder: (context, child) {
+                      return Transform.translate(
+                        offset: Offset(_animations[index].value, 0),
+                        child: Text('${index + 1}'),
+                      );
+                    },
                   ),
-                );
-              },
+                ),
+              ],
             );
           }),
         ),

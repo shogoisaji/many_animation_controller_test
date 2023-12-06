@@ -1,16 +1,14 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class ListViewPage extends StatefulWidget {
-  final int count;
+  final int count; // 100 or 1000 or 10000
 
   const ListViewPage({super.key, required this.count});
   @override
-  _ListViewPageState createState() => _ListViewPageState();
+  ListViewPageState createState() => ListViewPageState();
 }
 
-class _ListViewPageState extends State<ListViewPage> with TickerProviderStateMixin {
+class ListViewPageState extends State<ListViewPage> with TickerProviderStateMixin {
   final List<AnimationController> _controllers = [];
   final List<Animation<double>> _animations = [];
 
@@ -50,12 +48,7 @@ class _ListViewPageState extends State<ListViewPage> with TickerProviderStateMix
           return AnimatedBuilder(
             animation: _animations[index],
             builder: (context, child) {
-              return Transform.translate(
-                offset: Offset(_animations[index].value, 0),
-                child: ListTile(
-                  title: Text('${index + 1}'),
-                ),
-              );
+              return Transform.translate(offset: Offset(_animations[index].value, 0), child: Text('${index + 1}'));
             },
           );
         },
