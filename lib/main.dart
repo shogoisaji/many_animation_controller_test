@@ -67,11 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 500)),
+                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 1000)),
                     );
                   },
                   child: const Text(
-                    'ListView 500',
+                    'ListView 1000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -82,11 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 1000)),
+                      MaterialPageRoute(builder: (context) => const ListViewPage(count: 2000)),
                     );
                   },
                   child: const Text(
-                    'ListView 1000',
+                    'ListView 2000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -117,11 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 500)),
+                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 1000)),
                     );
                   },
                   child: const Text(
-                    'column 500',
+                    'column 1000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -132,11 +132,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 1000)),
+                      MaterialPageRoute(builder: (context) => const ColumnPage(count: 2000)),
                     );
                   },
                   child: const Text(
-                    'column 1000',
+                    'column 2000',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
