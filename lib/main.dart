@@ -1,3 +1,4 @@
+import 'package:animation_controller_test/image_page.dart';
 import 'package:animation_controller_test/list_view_page.dart';
 import 'package:animation_controller_test/column_page.dart';
 import 'package:flutter/material.dart';
@@ -56,8 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'ListView 100',
+                    'ListView\n100',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 ElevatedButton(
@@ -71,8 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'ListView 1000',
+                    'ListView\n1000',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 ElevatedButton(
@@ -86,8 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'ListView 3000',
+                    'ListView\n3000',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ],
@@ -106,8 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'column 100',
+                    'column\n100',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 ElevatedButton(
@@ -121,8 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'column 1000',
+                    'column\n1000',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 ElevatedButton(
@@ -136,12 +142,66 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: const Text(
-                    'column 3000',
+                    'column\n3000',
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ],
-            )
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).colorScheme.primary),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ImagePage(count: 100)),
+                    );
+                  },
+                  child: const Text(
+                    'column image\n100',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).colorScheme.primary),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ImagePage(count: 1000)),
+                    );
+                  },
+                  child: const Text(
+                    'column image\n1000',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).colorScheme.primary),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ImagePage(count: 3000)),
+                    );
+                  },
+                  child: const Text(
+                    'column image\n3000',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
